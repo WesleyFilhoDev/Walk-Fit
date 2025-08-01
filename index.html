@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Walk Fit</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="shortcut icon" href="assets/logo.webp" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+    <script src="js/menu.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <div class="logo">
+          <img src="assets/logo.webp" alt="logo do walk fit" />
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <ul id="navLinks">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#beneficios">Benefícios</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li>
+            <button>
+              <a href="#servicos">VAMOS LÁ!</a>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section class="inicio" id="inicio">
+      <div class="container_inicio">
+        <div class="content_text_inicio" data-aos="fade-right">
+          <h1>
+            Transfrome sua <br />
+            vida com a <br />
+            <span>Walk Fit</span>
+          </h1>
+          <p>
+            A <span>Walk Fit</span> é uma plataforma criada com o objetivo
+            <br />
+            de ajudar você usuário a ter uma vida mais saudável <br />
+            apartir de informações precisas e acessíveis.
+          </p>
+          <button>
+            <a href="#servicos">VAMOS LÁ!</a>
+          </button>
+        </div>
+        <div class="content_image_inicio" data-aos="fade-left">
+          <img src="assets/treinoHome.webp" alt="ilustração de caminhada" />
+        </div>
+      </div>
+    </section>
+    <section class="beneficios" id="beneficios">
+      <div class="container_beneficios">
+        <div class="content_text_beneficios">
+          <h1>Quais benefícios você<br />terá usando a Walk Fit?</h1>
+        </div>
+        <div class="content_cards_beneficios">
+          <div class="card">
+            <img src="assets/beneficio1.webp" alt="benefício 1" />
+            <h2>Saúde</h2>
+            <p>
+              Melhore sua saúde física e mental com cálculos assertivos para te
+              ajudar a manter uma rotina saudável.
+            </p>
+          </div>
+
+          <div class="card">
+            <img src="assets/beneficio2.webp" alt="benefício 2" />
+            <h2>Peso saudável</h2>
+            <p>
+              Calcule seu IMC em poucos segundos e saiba se você está no caminho
+              certo para uma vida mais leve e saudável.
+            </p>
+          </div>
+
+          <div class="card">
+            <img src="assets/beneficio3.webp" alt="benefício 3" />
+            <h2>Ajuda na sua dieta</h2>
+            <p>
+              Receba recomendações personalizadas de proteínas, carboidratos e
+              gorduras com base no seu perfil.
+            </p>
+          </div>
+          <div class="card">
+            <img src="assets/beneficio4.webp" alt="benefício 3" />
+            <h2>Quantidade de água</h2>
+            <p>
+              Saiba exatamente quanto de água seu corpo precisa diariamente para
+              manter o bom funcionamento.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="servicos" id="servicos">
+      <div class="container_servicos">
+        <div class="content_text_servicos">
+          <h1>
+            Conheça nossos serviços e os ultilize de forma totalmente gratuita!
+          </h1>
+          <p>
+            A <span>Walk Fit</span> oferece uma variedade de serviços para te
+            ajudar a manter uma vida saudável.<br />
+            Desde o cálculo do IMC até a recomendação de ingestão de água,<br />
+            todos os nossos serviços são gratuitos e acessíveis para você.
+          </p>
+        </div>
+        <div class="content_cards_servicos">
+          <div class="card_servico">
+            <img src="assets/imc.webp" alt="cálculo do IMC" />
+            <h2>Cálculo do IMC</h2>
+            <p>
+              Descubra seu Índice de Massa Corporal e saiba se você está no peso
+              ideal.
+            </p>
+            <a class="botao-acessar" href="html/imc.html">ACESSAR</a>
+          </div>
+
+          <div class="card_servico">
+            <img src="assets/dieta.webp" alt="dieta personalizada" />
+            <h2>Dieta Personalizada</h2>
+            <p>
+              Receba recomendações de macronutrientes com base no seu perfil
+              nutricional.
+            </p>
+            <a class="botao-acessar" href="html/macronutrientes.html"
+              >ACESSAR</a
+            >
+          </div>
+
+          <div class="card_servico">
+            <img src="assets/agua.webp" alt="ingestão de água" />
+            <h2>Ingestão de Água</h2>
+            <p>
+              Calcule a quantidade ideal de água que você deve beber
+              diariamente.
+            </p>
+            <a class="botao-acessar" href="html/agua.html">ACESSAR</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="depoimentos" id="depoimentos">
+      <div class="container_depoimentos">
+        <h1>O que dizem sobre a Walk Fit</h1>
+        <div class="cards_depoimentos">
+          <!-- Modelo 1: Padrão -->
+          <div class="card_depoimento modelo1">
+            <img src="assets/user1.webp" alt="Usuário 1" />
+            <div class="estrelas">⭐⭐⭐⭐⭐</div>
+            <p>
+              "A Walk Fit me ajudou a entender melhor meu corpo e manter hábitos
+              saudáveis!"
+            </p>
+            <span class="nome_usuario">Lucas F.</span>
+          </div>
+
+          <!-- Modelo 1: Padrão -->
+          <div class="card_depoimento modelo1">
+            <img src="assets/user2.webp" alt="Usuário 2" />
+            <div class="estrelas">⭐⭐⭐⭐</div>
+            <p>
+              "As recomendações de água são ótimas! Faço acompanhamento todos os
+              dias."
+            </p>
+            <span class="nome_usuario">Renata Silva</span>
+          </div>
+
+          <!-- Modelo 2: Horizontal com foto à esquerda -->
+          <div class="card_depoimento modelo1">
+            <img src="assets/user3.webp" alt="Usuário 3" />
+            <div class="depoimento_conteudo">
+              <div class="estrelas">⭐⭐⭐⭐⭐</div>
+              <p>
+                "Plataforma simples e muito funcional. Minha saúde agradece!"
+              </p>
+              <span class="nome_usuario">Fernando C.</span>
+            </div>
+          </div>
+
+          <!-- Modelo 1 -->
+          <div class="card_depoimento modelo1">
+            <img src="assets/user4.webp" alt="Usuário 4" />
+            <div class="estrelas">⭐⭐⭐⭐⭐</div>
+            <p>
+              "A parte de macronutrientes me ajudou a montar uma alimentação
+              mais inteligente."
+            </p>
+            <span class="nome_usuario">Bruna Lopes</span>
+          </div>
+
+          <!-- Modelo 2 -->
+          <div class="card_depoimento modelo1">
+            <img src="assets/user5.webp" alt="Usuário 5" />
+            <div class="depoimento_conteudo">
+              <div class="estrelas">⭐⭐⭐⭐</div>
+              <p>
+                "Com a Walk Fit, aprendi a importância de me hidratar
+                corretamente."
+              </p>
+              <span class="nome_usuario">Thiago M.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container_footer">
+        <p>Projeto desenvolvido por <strong>Wesley Filho</strong></p>
+
+        <div class="social_icons">
+          <a
+            href="https://www.instagram.com/wesleyfilho.dev"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <img src="assets/instagram.png" alt="Instagram" />
+          </a>
+
+          <a
+            href="https://wa.me/5588994947226?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Walk%20Fit!!"
+            target="_blank"
+            aria-label="WhatsApp"
+          >
+            <img src="assets/whatsapp.png" alt="WhatsApp" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/wesley-filho-26b8452a6"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <img src="assets/linkedin.png" alt="LinkedIn" />
+          </a>
+          <a
+            href="https://github.com/WesleyFilhoDev"
+            target="_blank"
+            aria-label="GitHub"
+          >
+            <img src="assets/github.png" alt="GitHub" />
+          </a>
+          <a
+            href="mailto:wesleyfilho221204@gmail.com"
+            target="_blank"
+            aria-label="Email"
+          >
+            <img src="assets/gmail.png" alt="Email" />
+          </a>
+        </div>
+
+        <p class="direitos">
+          © 2025 Wesley Filho. Todos os direitos reservados.
+        </p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
