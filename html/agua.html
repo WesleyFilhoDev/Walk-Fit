@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ingestão de Água</title>
+    <link rel="stylesheet" href="../css/agua.css" />
+    <link rel="shortcut icon" href="../assets/logo.webp" type="image/x-icon" />
+    <script src="../js/agua.js" defer></script>
+  </head>
+  <body>
+    <section class="agua">
+      <div class="container">
+        <div class="title">
+          <h1>Calculadora de ingestão de água</h1>
+          <p>
+            Calcule quanto você tem que beber de água diariamente para se manter
+            saudável.
+          </p>
+        </div>
+        <div class="info">
+          <h1>ÁGUA</h1>
+          <input type="number" id="weight" placeholder="Peso (kg)" />
+          <input
+            type="button"
+            value="Calcular"
+            id="calculate"
+            class="calculate"
+          />
+          <div class="result" id="result">
+            <p id="imcResult"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
