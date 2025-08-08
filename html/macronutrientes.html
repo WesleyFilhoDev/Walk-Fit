@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cálculo de Macronutrientes</title>
+    <link rel="stylesheet" href="../css/macro.css" />
+    <link rel="shortcut icon" href="../assets/logo.webp" type="image/x-icon" />
+    <script src="../js/macro.js" defer></script>
+  </head>
+  <body>
+    <section class="imc">
+      <div class="container">
+        <div class="title">
+          <h1>Calculadora Macronutrintes para sua dieta</h1>
+          <p>
+            Descubra a quantidade ideal de proteínas, carboidratos e gorduras
+            para alcançar seus objetivos.
+          </p>
+        </div>
+        <div class="info">
+          <h1>MACRONUTRIENTES</h1>
+          <input type="number" id="weight" placeholder="Peso (kg)" />
+          <input type="number" id="height" placeholder="Altura (cm)" />
+          <div class="select-container">
+            <div class="objectives">
+              <label for="opcoes">Escolha seu objetivo:</label>
+              <select id="opcoes" name="opcoes">
+                <option value="opcao1">Ganhar peso</option>
+                <option value="opcao2">Perder peso</option>
+                <option value="opcao3">Manter peso</option>
+              </select>
+            </div>
+            <div class="sexo">
+              <label for="sexo">Selecione seu sexo:</label>
+              <select id="sexo" name="sexo">
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+              </select>
+            </div>
+            <div class="active-level">
+              <label for="active-level">Nível de atividade:</label>
+              <select id="active-level" name="active-level">
+                <option value="sedentario">Sedentário</option>
+                <option value="leve">Leve</option>
+                <option value="moderado">Moderado</option>
+                <option value="intenso">Intenso</option>
+              </select>
+            </div>
+          </div>
+
+          <input
+            type="button"
+            value="Calcular"
+            id="calculate"
+            class="calculate"
+          />
+          <div class="result" id="result">
+            <p id="imcResult"></p>
+            <p id="imcCategory"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
