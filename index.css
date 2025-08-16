@@ -1,3 +1,7 @@
+body {
+  background: linear-gradient(to bottom, #7dbe3c, #168a52);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -82,7 +86,6 @@ a {
 }
 
 .inicio {
-  background: linear-gradient(to bottom, #7dbe3c, #168a52);
   min-height: 100vh; /* permite que a altura se ajuste ao conteúdo */
   display: flex;
   align-items: center;
