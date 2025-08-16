@@ -15,7 +15,7 @@ body {
   background: linear-gradient(to bottom, #168a52, #fabe0d);
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -27,7 +27,7 @@ body {
 }
 
 .title {
-  margin-top: 10px;
+  margin-top: 50px;
   color: white;
   text-align: center;
 }
@@ -153,6 +153,7 @@ select {
   margin-top: 20px;
   margin-bottom: 20px;
   min-height: 60px; /* <- RESERVA espaço mesmo vazio */
+  padding: 10px;
   text-align: center;
 }
 
