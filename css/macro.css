@@ -4,9 +4,19 @@
   padding: 0;
 }
 
+html,
+body {
+  height: 100%;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
 .imc {
   background: linear-gradient(to bottom, #168a52, #fabe0d);
-  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
@@ -17,7 +27,7 @@
 }
 
 .title {
-  margin-top: 40px;
+  margin-top: 10px;
   color: white;
   text-align: center;
 }
@@ -141,6 +151,7 @@ select {
   font-family: "Poppins", sans-serif;
   color: #168a52;
   margin-top: 20px;
+  margin-bottom: 20px;
   min-height: 60px; /* <- RESERVA espaço mesmo vazio */
   text-align: center;
 }
@@ -150,7 +161,8 @@ select {
     width: 90%;
     height: auto;
     padding: 20px;
-    margin-top: 80px;
+    margin-top: 30px;
+    margin-bottom: 50px;
   }
 
   .info input {
