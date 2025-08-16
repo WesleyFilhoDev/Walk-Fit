@@ -7,6 +7,7 @@ const activeLevelValue = document.getElementById("active-level");
 const calculateButton = document.getElementById("calculate");
 const resultElement = document.getElementById("result");
 
+let tmb = 0;
 function calculateTBM() {
   const weight = parseFloat(weightValue.value);
   const height = parseFloat(heightValue.value);
@@ -26,7 +27,6 @@ function calculateTBM() {
     return;
   }
 
-  let tmb;
   if (sexo === "masculino") {
     tmb = 88.362 + 13.397 * weight + 4.799 * height - 5.677 * age;
   } else if (sexo === "feminino") {
