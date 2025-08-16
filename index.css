@@ -1,7 +1,3 @@
-body {
-  background: linear-gradient(to bottom, #7dbe3c, #168a52);
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -86,6 +82,7 @@ a {
 }
 
 .inicio {
+  background: linear-gradient(to bottom, #7dbe3c, #168a52);
   min-height: 100vh; /* permite que a altura se ajuste ao conteúdo */
   display: flex;
   align-items: center;
@@ -227,9 +224,8 @@ a {
 
 .content_text_beneficios h1 {
   color: #ffffff;
-  font-size: 35px;
+  font-size: 40px;
   font-weight: bold;
-  min-width: 400px;
   font-family: "Poppins", sans-serif;
   text-align: center;
 }
@@ -305,10 +301,9 @@ a {
 
 .content_text_servicos p {
   color: #ffffff;
-  font-size: 19px;
+  font-size: 22px;
   font-family: "Poppins", sans-serif;
   text-align: center;
-  margin: 0 30px;
   margin-bottom: 100px;
 }
 
