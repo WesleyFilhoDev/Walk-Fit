@@ -30,15 +30,67 @@ function calculateTBM() {
   if (sexo === "masculino") {
     tmb = 88.362 + 13.397 * weight + 4.799 * height - 5.677 * age;
   } else if (sexo === "feminino") {
-    tmb = 444.593 + 9.247 * weight + 3.098 * height - 4.33 * age;
+    tmb = 447.593 + 9.247 * weight + 3.098 * height - 4.33 * age; // corrigido valor base
   } else {
     resultElement.innerHTML = "Selecione o sexo.";
     return;
   }
 
-  resultElement.innerHTML = `Sua Taxa Metabólica Basal (TMB) é: <strong>${tmb.toFixed(
-    2
-  )}</strong> calorias/dia.`;
+  return tmb;
 }
 
-calculateButton.addEventListener("click", calculateTBM);
+function calculateGET() {
+  const activeLevel = activeLevelValue.value;
+  let get = 0;
+
+  if (activeLevel === "sedentario") {
+    get = tmb * 1.2;
+  } else if (activeLevel === "leve") {
+    get = tmb * 1.375;
+  } else if (activeLevel === "moderado") {
+    get = tmb * 1.55;
+  } else if (activeLevel === "intenso") {
+    get = tmb * 1.725;
+  } else if (activeLevel === "muito-intenso") {
+    get = tmb * 1.9;
+  }
+
+  return get;
+}
+
+function calculateMacros() {
+  const weight = parseFloat(weightValue.value);
+  const objective = objectiveValue.value;
+  const tmbValue = calculateTBM();
+  const getValue = calculateGET();
+
+  // Proteínas
+  let protein = 0;
+  if (objective === "perder-peso") {
+    protein = weight * 2.2;
+  } else if (objective === "manter-peso") {
+    protein = weight * 1.6;
+  } else if (objective === "ganhar-massa") {
+    protein = weight * 1.8;
+  }
+
+  //Carboidratos
+  let carbs = 0;
+  if (objective === "perder-peso") {
+  }
+
+  // Mostrar tudo junto
+  resultElement.innerHTML = `
+    Taxa Metabólica Basal (TMB): <strong>${tmbValue.toFixed(
+      2
+    )}</strong> calorias/dia.<br>
+    Gasto Energético Total (GET) é: <strong>${getValue.toFixed(
+      2
+    )}</strong> calorias/dia.<br>
+    Proteínas por dia: <strong>${protein.toFixed(2)}g</strong>
+  `;
+}
+
+calculateButton.addEventListener("click", () => {
+  calculateMacros();
+});
