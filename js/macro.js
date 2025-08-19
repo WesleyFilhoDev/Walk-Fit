@@ -74,21 +74,53 @@ function calculateMacros() {
     protein = weight * 1.8;
   }
 
-  //Carboidratos
-  let carbs = 0;
+  // Gorduras
+  let fat = 0;
   if (objective === "perder-peso") {
+    fat = weight * 0.8;
+  } else if (objective === "manter-peso") {
+    fat = weight * 1.0;
+  } else if (objective === "ganhar-massa") {
+    fat = weight * 1.2;
   }
 
+  // Calorias de proteína e gordura
+  const proteinCalories = protein * 4;
+  const fatCalories = fat * 9;
+
+  // Carboidratos = calorias restantes até o GET
+  let remainingCalories = getValue - (proteinCalories + fatCalories);
+  let carbs = remainingCalories / 4; // 1g carbo = 4 kcal
+
   // Mostrar tudo junto
+  let mensagemFinal = "Esses são os valores ideais para sua dieta!";
+
   resultElement.innerHTML = `
-    Taxa Metabólica Basal (TMB): <strong>${tmbValue.toFixed(
-      2
-    )}</strong> calorias/dia.<br>
-    Gasto Energético Total (GET) é: <strong>${getValue.toFixed(
-      2
-    )}</strong> calorias/dia.<br>
-    Proteínas por dia: <strong>${protein.toFixed(2)}g</strong>
-  `;
+  <div class="result-card">
+    <h2>📊 Resultado da sua dieta</h2>
+    <table class="result-table">
+      <tr><td>🔥 <strong>TMB:</strong></td><td>${tmbValue.toFixed(
+        2
+      )} cal/dia</td></tr>
+      <tr><td>⚡ <strong>GET:</strong></td><td>${getValue.toFixed(
+        2
+      )} cal/dia</td></tr>
+      <tr><td>🍗 <strong>Proteínas:</strong></td><td>${protein.toFixed(
+        2
+      )}g</td></tr>
+      <tr><td>🥑 <strong>Gorduras:</strong></td><td>${fat.toFixed(2)}g</td></tr>
+      <tr><td>🍞 <strong>Carboidratos:</strong></td><td>${carbs.toFixed(
+        2
+      )}g</td></tr>
+      <tr><td>📦 <strong>Total de Calorias:</strong></td><td>${(
+        proteinCalories +
+        fatCalories +
+        carbs * 4
+      ).toFixed(2)} cal/dia</td></tr>
+    </table>
+    <p class="motivacao">${mensagemFinal}</p>
+  </div>
+`;
 }
 
 calculateButton.addEventListener("click", () => {

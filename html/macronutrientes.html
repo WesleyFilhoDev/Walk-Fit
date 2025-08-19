@@ -19,45 +19,47 @@
           </p>
         </div>
         <div class="info">
-          <h1>MACRONUTRIENTES</h1>
-          <input type="number" id="weight" placeholder="Peso (kg)" />
-          <input type="number" id="height" placeholder="Altura (cm)" />
-          <input type="number" id="age" placeholder="Idade (anos)" />
-          <div class="select-container">
-            <div class="objectives">
-              <label for="opcoes">Escolha seu objetivo:</label>
-              <select id="opcoes" name="opcoes">
-                <option value="ganhar-massa">Ganhar massa</option>
-                <option value="perder-peso">Perder peso</option>
-                <option value="manter-peso">Manter peso</option>
-              </select>
+          <div class="informations">
+            <h1>MACRONUTRIENTES</h1>
+            <input type="number" id="weight" placeholder="Peso (kg)" />
+            <input type="number" id="height" placeholder="Altura (cm)" />
+            <input type="number" id="age" placeholder="Idade (anos)" />
+            <div class="select-container">
+              <div class="objectives">
+                <label for="opcoes">Escolha seu objetivo:</label>
+                <select id="opcoes" name="opcoes">
+                  <option value="ganhar-massa">Ganhar massa</option>
+                  <option value="perder-peso">Perder peso</option>
+                  <option value="manter-peso">Manter peso</option>
+                </select>
+              </div>
+              <div class="sexo">
+                <label for="sexo">Selecione seu sexo:</label>
+                <select id="sexo" name="sexo">
+                  <option value="masculino">Masculino</option>
+                  <option value="feminino">Feminino</option>
+                </select>
+              </div>
+              <div class="active-level">
+                <label for="active-level">Nível de atividade:</label>
+                <select id="active-level" name="active-level">
+                  <option value="sedentario">
+                    Sedentário (pouco ou nenhum exercício)
+                  </option>
+                  <option value="leve">Leve (1-3 dias/semana)</option>
+                  <option value="moderado">Moderado (3-5 dias/semana)</option>
+                  <option value="intenso">Intenso (6-7 dias/semana)</option>
+                </select>
+              </div>
             </div>
-            <div class="sexo">
-              <label for="sexo">Selecione seu sexo:</label>
-              <select id="sexo" name="sexo">
-                <option value="masculino">Masculino</option>
-                <option value="feminino">Feminino</option>
-              </select>
-            </div>
-            <div class="active-level">
-              <label for="active-level">Nível de atividade:</label>
-              <select id="active-level" name="active-level">
-                <option value="sedentario">
-                  Sedentário (pouco ou nenhum exercício)
-                </option>
-                <option value="leve">Leve (1-3 dias/semana)</option>
-                <option value="moderado">Moderado (3-5 dias/semana)</option>
-                <option value="intenso">Intenso (6-7 dias/semana)</option>
-              </select>
-            </div>
-          </div>
 
-          <input
-            type="button"
-            value="Calcular"
-            id="calculate"
-            class="calculate"
-          />
+            <input
+              type="button"
+              value="Calcular"
+              id="calculate"
+              class="calculate"
+            />
+          </div>
           <div class="result" id="result"></div>
         </div>
       </div>

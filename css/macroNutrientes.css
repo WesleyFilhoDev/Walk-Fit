@@ -45,20 +45,20 @@ body {
 
 /* Caixa branca centralizada */
 .info {
-  width: 650px;
+  width: 950px;
   height: 500px;
   border: 3px solid green;
   border-radius: 30px;
   background-color: white;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 
   margin-top: 50px;
   margin-bottom: auto;
-  gap: 20px;
+  gap: 50px;
 }
 
 .info h1 {
@@ -77,6 +77,14 @@ body {
   padding-left: 20px;
   font-size: 20px;
   font-family: "Poppins", sans-serif;
+}
+
+.informations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
 .select-container {
@@ -146,18 +154,79 @@ select {
   transform: scale(0.98);
 }
 
-.result {
-  font-size: 24px;
-  font-family: "Poppins", sans-serif;
-  justify-content: center;
-  align-items: center;
+.result-card {
+  background-color: #ffffff;
+  border: 2px solid #168a52;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+}
 
+.result-card h2 {
   color: #168a52;
-
-  margin-bottom: 50px;
-  min-height: 60px; /* <- RESERVA espaço mesmo vazio */
-  padding: 10px;
+  font-size: 28px;
+  margin-bottom: 15px;
   text-align: center;
+}
+
+.result-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 18px;
+}
+
+.result-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.result-table td:first-child {
+  font-weight: bold;
+  color: #168a52;
+}
+
+.motivacao {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #0f6b3e;
+  text-align: center;
+}
+
+@media (max-width: 970px) {
+  .info {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+
+    flex-direction: column;
+  }
+
+  .info input {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .calculate {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .title h1 {
+    font-size: 32px;
+  }
+
+  .title p {
+    font-size: 16px;
+  }
+
+  .result {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -167,6 +236,8 @@ select {
     padding: 20px;
     margin-top: 30px;
     margin-bottom: 50px;
+
+    flex-direction: column;
   }
 
   .info input {
